@@ -1,6 +1,5 @@
 const sequelize = require('../config/db');
 
-// Create an item
 async function storeItems(req, res) {
     try {
         const { ItemsCode, ItemsName, BatchCode, UnitPrice, MRP, GST, GSTAmount } = req.body;
@@ -21,7 +20,6 @@ async function storeItems(req, res) {
     }
 }
 
-// Read all items
 async function getAllItems(req, res) {
     try {
         const items = await sequelize.query('SELECT * FROM items', { type: sequelize.QueryTypes.SELECT });
@@ -32,7 +30,6 @@ async function getAllItems(req, res) {
     }
 }
 
-// Read a single item by ID
 async function updateItems(req, res) {
     try {
         const { id } = req.params;
@@ -53,7 +50,6 @@ async function updateItems(req, res) {
     }
 }
 
-// Delete an item
 async function deleteItems(req, res) {
     try {
         const { id } = req.params;
