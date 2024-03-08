@@ -1,0 +1,6 @@
+backendport=9000
+DB_HOST='127.0.0.1'
+DB_PORT='8889'
+DB_DATABASE='RoadMate'
+DB_USERNAME='root'
+DB_PASSWORD='root'
